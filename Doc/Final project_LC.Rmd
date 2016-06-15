@@ -1,0 +1,20 @@
+---
+title: "Final project -"
+author: "Lukas Cerno, Hederik de Vries & Casper Roex"
+date: "10 June 2016"
+output: html_document
+---
+
+```{r echo=TRUE, eval=TRUE, tidy=TRUE}
+getwd()
+setwd("../Final project")
+list.files()
+rm(list=ls()) # Clean up the memory, if we want to rerun from scratch
+```
+
+```{r echo=TRUE, eval=TRUE, tidy=TRUE}
+ProjectData <- read.csv("data/listings.csv", sep=";", dec=",") # this contains only the matrix ProjectData
+ProjectData=data.matrix(ProjectData) 
+colnames(ProjectData)<-gsub("\\."," ",colnames(ProjectData))
+
+```
